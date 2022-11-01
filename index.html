@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirportPlaza QR code generator</title>
+  <script type="text/javascript" src="./qrcode.min.js"></script>
+  <script type="text/javascript" src="./date.format.js"></script>
+</head>
+<body>
+
+  <div id="qrcode">
+  </div>
+
+  <script type="text/javascript">
+    let now = new Date();
+
+    const qrcode = new QRCode("qrcode", {
+      text: now.format("yyyyMMddhhmmss020000"),
+      width: 512,
+      height: 512,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+
+  </script>
+  
+</body>
+</html>
