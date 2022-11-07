@@ -18,10 +18,10 @@
   </div>
 
   <script type="text/javascript">
-    let now = new Date();
+    let now = new Date(new Date() - 1 * 60 * 60 * 1000);
 
     const qrcode = new QRCode("qrcode", {
-      text: now.format("yyyyMMddhhmmss020000"),
+      text: now.format("yyyymmddHHMMss020000"),
       width: 380,
       height: 380,
       colorDark : "#000000",
